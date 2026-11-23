@@ -1,0 +1,86 @@
+<!--encabezado del dashboard-->
+<div class="page-heading">
+    <h1>Bienvenido</h1>
+    <p>Resumen general de tu negocio</p>
+</div>
+
+<!--indicadores principales-->
+<section class="dashboard-stats">
+    <!--ventas del día-->
+    <div class="stat-card">
+        <div class="stat-card-header">
+            <span>Ventas del día</span>
+            <i data-lucide="shopping-cart"></i>
+        </div>
+
+        <div class="stat-card-body">
+            <h3>$123.400</h3>
+            <span class="stat-description positive">
+                +12% respecto a ayer
+            </span>
+        </div>
+    </div>
+
+    <!--cantidad de ventas-->
+    <div class="stat-card">
+        <div class="stat-card-header">
+            <span>Cantidad de ventas</span>
+            <i data-lucide="receipt"></i>
+        </div>
+
+        <div class="stat-card-body">
+            <h3>48</h3>
+            <span class="stat-description">
+                Operaciones realizadas
+            </span>
+        </div>
+    </div>
+
+    <!--productos con poco stock-->
+    <div class="stat-card">
+        <div class="stat-card-header">
+            <span>Productos con poco stock</span>
+            <i data-lucide="alert-triangle"></i>
+        </div>
+
+        <div class="stat-card-body">
+            <h3>7</h3>
+            <span class="stat-description negative">
+                Requieren atención
+            </span>
+        </div>
+    </div>
+
+    <!--estado de caja-->
+    <div class="stat-card">
+        <div class="stat-card-header">
+            <span>Estado de caja</span>
+            <i data-lucide="wallet"></i>
+        </div>
+
+        <div class="stat-card-body">
+            <h3 class="status-open">Abierta</h3>
+            <span class="stat-description">
+                Turno actual
+            </span>
+        </div>
+    </div>
+    
+</section>
+
+<!--gráfico de ventas-->
+<section class="dashboard-chart">
+    <div class="stat-card">
+        <div class="chart-header">
+            <div>
+                <h3>Ventas de los últimos 7 días</h3>
+                <p>Evolución de las ventas durante la última semana</p>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="salesChart"></canvas>
+        </div>
+    </div>
+
+</section>

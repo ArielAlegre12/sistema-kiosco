@@ -1,0 +1,58 @@
+/*TARJETAS GENERALES*/
+.stat-card{
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    box-shadow: var(--shadow-card);
+}
+
+/*ENCABEZADO DE TARJETA*/
+.stat-card-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: var(--color-text-secondary);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.stat-card-header svg{
+    width: 20px;
+    height: 20px;
+}
+
+/*CONTENIDO DE TARJETA*/
+.stat-card-body{
+    margin-top: 18px;
+}
+
+.stat-card-body h3{
+    color: var(--color-text);
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/*DESCRIPCIONES*/
+.stat-description{
+    display: block;
+    margin-top: 6px;
+
+    color: var(--color-text-secondary);
+    font-size: 12px;
+}
+
+.stat-description.positive{
+    color: var(--color-success);
+}
+
+.stat-description.negative{
+    color: var(--color-danger);
+}
+
+/*ESTADOS*/
+.status-open{
+    color: var(--color-success) !important;
+}

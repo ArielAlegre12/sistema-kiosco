@@ -1,0 +1,36 @@
+/*ANIMACIÓN DE CAMBIO DE TEMA*/
+
+/*transición de oscuro a claro*/
+html[data-transition="to-light"]::view-transition-new(root){
+    clip-path: url(#wave-mask-down);
+    animation: wave-lifetime 1.5s linear both;
+}
+
+/*transición de claro a oscuro*/
+html[data-transition="to-dark"]::view-transition-new(root){
+    clip-path: url(#wave-mask-up);
+    animation: wave-lifetime 1.5s linear both;
+}
+
+/*evitar animación de la vista anterior*/
+::view-transition-old(root){
+    animation: none;
+}
+
+/*mantener activa la transción*/
+@keyframes wave-lifetime{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/*respetar preferencias de movimientos*/
+ @media(prefers-reduced-motion: reduce){
+    html[data-transition]::view-transition-new(root){
+        clip-path: none;
+        animation-duration: 0.01ms;
+    }
+ }

@@ -1,0 +1,46 @@
+/*DASHBOARD*/
+
+/*------------INDICADORES PRINCIPALES------------*/
+.dashboard-stats{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/*TABLETS*/
+@media(max-width: 1100px){
+    .dashboard-stats{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*CELULARES*/
+@media(max-width: 576px){
+    .dashboard-stats{
+        grid-template-columns: 1fr;
+    }
+}
+
+/*----------GRÁFICO DE VENTAS--------------*/
+.dashboard-chart{
+    margin-top: 24px;
+}
+
+.chart-header h3{
+    color: var(--color-text);
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.chart-header p{
+    color: var(--color-text-secondary);
+    font-size: 12px;
+    margin: 6px 0 0;
+}
+
+.chart-container{
+    position: relative;
+    height: 300px;
+    margin-top: 24px;
+}

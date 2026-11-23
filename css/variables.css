@@ -1,0 +1,69 @@
+/*variables globales*/
+
+/*tipografía*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/*======TEMA CLARO=========*/
+:root{
+    /*colores predefinidos*/
+    --color-primary: #6366F1;
+    --color-primary-hover: #4F46E5;
+
+    /*fondos*/
+    --color-background: #F4F5F9;
+    --color-surface: #FFFFFF;
+    --color-sidebar: #FFFFFF;
+
+    /*textos*/
+    --color-text: #202438;
+    --color-text-secondary: #687280;
+
+    /*bordes*/
+    --color-border: #E5E7EB;
+
+    /*estados*/
+    --color-success: #10b981;
+    --color-danger: #EF4444;
+    --color-warning: #F59E08;
+    --color-info: #3882F6;
+
+    /*sombras*/
+    --shadow-card: 0 2px 8px rgba(0,0,0,0.04);
+
+    /*tipografía*/
+    --font-primary: 'Inter', sans-serif;
+
+    /*bordes redondeados*/
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+}
+
+/*=======TEMA OSCURO=========*/
+[data-theme="dark"]{
+
+    /*colores principales*/
+    --color-primary: #818CF8;
+    --color-primary-hover: #6366F1;
+
+    /*fondos*/
+    --color-background:#111318;
+    --color-surface:#1C2029;
+    --color-sidebar: #181b23;
+
+    /*textos*/
+    --color-text: #f1f2f6;
+    --color-text-secondary: #9ca3af;
+
+    /*bordes*/
+    --color-border: #303541;
+
+    /*estados*/
+    --color-success: #34d399;
+    --color-danger: #f87171;
+    --color-warning: #FBBF24;
+    --color-info: #60a5fa;
+
+    /*sombras*/
+    --shadow-card: 0 2px 8px rgba(0,0,0, 0.20);
+}
