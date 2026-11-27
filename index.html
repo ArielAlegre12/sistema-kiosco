@@ -25,6 +25,9 @@
 <body>
     <!--contenedor principal-->
     <div class="app-container">
+        <!--fondo para cerrar el menú en dispositivos móviles-->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
         <!--menú lateral-->
         <aside class="sidebar" id="sidebar">
             <!--identidad del sistema-->
@@ -108,7 +111,9 @@
             <!--barra superior-->
             <header class="topbar">
                 <div class="topbar-left">
-                    <button class="icon-button" id="sidebarToggle">
+                    <button class="icon-button" id="sidebarToggle"
+                            type="button" aria-label="Abrir o contraer menú"
+                            aria-controls="sidebar" aria-expanded="true">
                         <i data-lucide="menu"></i>
                     </button>
 

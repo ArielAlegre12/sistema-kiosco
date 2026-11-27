@@ -154,6 +154,14 @@ body{
     gap: 18px;
 }
 
+.topbar-left{
+    margin-right: 24px;
+}
+
+.topbar-right{
+    gap: 12px;
+}
+
 .topbar-left h2{
     font-size: 16px;
     font-weight: 600;
@@ -247,4 +255,140 @@ body{
     font-size: 13px;
     color: var(--color-text-secondary);
     margin: 0;
+}
+
+/*SIDEBAR CONTRARIDO EN ESCRITORIO*/
+
+/*transición al contraer o expandir*/
+.sidebar{
+    transition: width 0.3s ease, min-width 0.3s ease;
+}
+
+/*estado contraído*/
+.sidebar.sidebar-collapsed{
+    width: 76px;
+    min-width: 76px;
+    padding: 24px 12px;
+}
+
+/*ocultar la información del sistema*/
+.sidebar.sidebar-collapsed .brand-info{
+display: none;
+}
+
+/*centrar el icono de identidad*/
+.sidebar.sidebar-collapsed .sidebar-brand{
+    justify-content: center;
+    padding: 0;
+}
+
+/*ocultar titulos de las secciones*/
+.sidebar.sidebar-collapsed .nav-section-title{
+    display: none;
+}
+
+/*centrar los enlaces*/
+.sidebar.sidebar-collapsed .nav-link{
+    justify-content: center;
+    padding: 11px 0;
+}
+
+/*ocultar texto de los enlaces*/
+.sidebar.sidebar-collapsed .nav-link span{
+    display: none;
+}
+
+/*FONDO PARA EL MENÚ MOVIL*/
+.sidebar-overlay{
+    display: none;
+}
+
+/*comportamiento en celulares*/
+@media(max-width:767px){
+    /*sidebar fuera de la pantalla incialmente*/
+    .sidebar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+
+        width: 250px;
+        min-width: 250px;
+        height: 100vh;
+
+        z-index: 1050;
+
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    /*sidebar abierto*/
+    .sidebar.sidebar-open{
+        transform: translateX(0);
+    }
+
+    /*en móvil no usamos el modo contraido*/
+    .sidebar.sidebar-collapsed{
+        width: 250px;
+        min-width: 250px;
+        padding: 24px 16px;
+    }
+
+    .sidebar.sidebar.collapsed .brand-info,
+    .sidebar.sidebar-collapsed .nav-section-title,
+    .sidebar.sidebar-collapsed .nav-link span{
+        display: initial;
+    }
+
+    .sidebar.sidebar-collapsed .sidebar-brand{
+        justify-content: flex-start;
+        padding: 0 8px;
+    }
+
+    .sidebar.sidebar-collapsed .nav-link{
+        justify-content: flex-start;
+        padding: 11px 12px;
+    }
+
+    /*fondo oscuro detrás del menú*/
+    .sidebar-overlay{
+        display: block;
+
+        position: fixed;
+        inset: 0;
+
+        background-color: rgba(0, 0, 0, 0.5);
+
+        z-index: 1040;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    /*mostrar el fondo cuando el menú esta abierto*/
+    .sidebar-overlay.active{
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    /*ajustes del contenido en celular*/
+    .topbar{
+        padding: 0 16px;
+    }
+
+    .main-content{
+        padding: 20px 16px;
+    }
+}
+
+/*RESPETAR PREFERENCIAS DE MOVIMIENTO*/
+@media(prefers-reduced-motion: reduce){
+    .sidebar,
+    .sidebar-overlay{
+        transition: none;
+    }
 }
