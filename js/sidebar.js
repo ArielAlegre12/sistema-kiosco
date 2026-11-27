@@ -13,6 +13,9 @@ function openSidebar(){
     sidebar.classList.add("sidebar-open");
     sidebarOverlay.classList.add("active");
 
+    //bloquear scroll de la página
+    document.body.classList.add("sidebar-open");
+
     //actualizar estado del botón
     sidebarToggle.setAttribute("aria-expanded", "true");
 }
@@ -21,6 +24,9 @@ function openSidebar(){
 function closeSidebar(){
     sidebar.classList.remove("sidebar-open");
     sidebarOverlay.classList.remove("active");
+
+    //habilitar nuevamente el scroll
+    document.body.classList.remove("sidebar-open")
 
     //actualizar estado del botón
     sidebarToggle.setAttribute("aria-expanded", "true");

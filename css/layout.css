@@ -303,6 +303,11 @@ display: none;
     display: none;
 }
 
+/*bloquear scroll cuando el sidebar está abierto*/
+body.sidebar-open{
+    overflow: hidden;
+}
+
 /*comportamiento en celulares*/
 @media(max-width:767px){
     /*sidebar fuera de la pantalla incialmente*/
@@ -357,7 +362,10 @@ display: none;
         position: fixed;
         inset: 0;
 
-        background-color: rgba(0, 0, 0, 0.5);
+        /*oscurecer y desenfocar el contenido*/
+        background-color: rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
 
         z-index: 1040;
 
