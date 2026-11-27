@@ -17,7 +17,7 @@ function openSidebar(){
     document.body.classList.add("sidebar-open");
 
     //actualizar estado del botón
-    sidebarToggle.setAttribute("aria-expanded", "true");
+    sidebarToggle.setAttribute("aria-expanded", "false");
 }
 
 //cerrar el sidebar en celular
@@ -26,7 +26,7 @@ function closeSidebar(){
     sidebarOverlay.classList.remove("active");
 
     //habilitar nuevamente el scroll
-    document.body.classList.remove("sidebar-open")
+    document.body.classList.remove("sidebar-open");
 
     //actualizar estado del botón
     sidebarToggle.setAttribute("aria-expanded", "true");
@@ -60,4 +60,11 @@ sidebarLinks.forEach(link=>{
             closeSidebar();
         }
     });
+});
+
+//cerrar sidebar al cambiar a escritorio
+window.addEventListener("resize", ()=>{
+    if(!isMobile()){
+        closeSidebar();
+    }
 });

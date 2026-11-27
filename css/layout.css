@@ -319,7 +319,7 @@ body.sidebar-open{
 
         width: 250px;
         min-width: 250px;
-        height: 100vh;
+        height: 100dvh;
 
         z-index: 1050;
 
@@ -339,7 +339,7 @@ body.sidebar-open{
         padding: 24px 16px;
     }
 
-    .sidebar.sidebar.collapsed .brand-info,
+    .sidebar.sidebar-collapsed .brand-info,
     .sidebar.sidebar-collapsed .nav-section-title,
     .sidebar.sidebar-collapsed .nav-link span{
         display: initial;
